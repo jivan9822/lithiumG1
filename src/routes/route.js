@@ -78,6 +78,8 @@ router.get("/test-me", function (req, res) {
     "=========================Problem-4 Solution========================="
   );
 
+  const _ = require("lodash");
+
   const months = [
     "JAN",
     "FEB",
@@ -92,6 +94,7 @@ router.get("/test-me", function (req, res) {
     "NOV",
     "DEC",
   ];
+  // This is without lodash
   const tempArr = [0, 3, 6, 9];
   const chunkArr = tempArr.map((each) => {
     return months.slice(each, each + 3);
@@ -100,7 +103,10 @@ router.get("/test-me", function (req, res) {
     console.log(each);
   });
 
-  const _ = require("lodash");
+  // With lodash chunk funk
+
+  const newChunkArr = _.chunk(months, 3); //?
+  console.log("Chunk Arr", newChunkArr);
 
   let x = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
