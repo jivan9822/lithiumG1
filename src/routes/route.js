@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router(); ///test-you
 //importing a custom module
 const xyz = require("../logger");
-const { Welcome, addNum, destruct } = require("../logger/logger");
+const { loggers } = require("../logger/logger");
 const heplper = require("../util/helper");
 const formater = require("../validator/formatter");
 //importing external package
@@ -10,9 +10,9 @@ const underscore = require("underscore");
 // importing Welcome function from logger/logger.js
 
 router.get("/test-me", function (req, res) {
-  const sum = addNum(10, 20);
+  const sum = loggers.addNum(10, 20);
   console.log(sum);
-  const destArr = destruct([
+  const destArr = loggers.destruct([
     [1, 2],
     [2, 3],
     [4, 5],
@@ -32,8 +32,15 @@ router.get("/test-me", function (req, res) {
   console.log(
     "=========================Problem-1 Solution========================="
   );
-  console.log("Calling Welcome Function", Welcome());
 
+  // Uding bind method
+  console.log(
+    "Calling Welcome Function",
+    loggers.Welcome.bind({ name: "Manju" })()
+  );
+
+  // Normal calling
+  console.log("Calling Welcome Function", loggers.Welcome());
   // ================Problem 2==================================
   console.log(
     "=========================Problem-2 Solution========================="

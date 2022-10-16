@@ -1,15 +1,18 @@
 const _ = require("lodash");
-const Welcome = () => {
-  return "Welcome to my application. I am Jivan and a part of FunctionUp Plutonium cohort.";
+
+const loggers = {
+  name: "Jivan",
+  Welcome() {
+    return `Welcome to my application. I am ${this.name} and a part of FunctionUp Plutonium cohort.`;
+  },
+  destruct(arr) {
+    return _.flatten(arr);
+  },
+  addNum(a, b) {
+    a + b;
+  },
 };
 
-const destruct = (arr) => {
-  return _.flatten(arr);
-};
-
-const addNum = (a, b) => a + b;
 module.exports = {
-  Welcome,
-  addNum,
-  destruct,
+  loggers,
 };
