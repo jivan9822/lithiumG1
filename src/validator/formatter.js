@@ -11,8 +11,15 @@ const trim = (str) => str.trim();
 const changetoLowerCase = (str) => str.toLowerCase();
 const changeToUpperCase = (str) => str.toUpperCase();
 
+// using high order functions
+
+const transform = (str, fn) => {
+  return fn(str);
+};
+
 module.exports = {
   trim,
   changetoLowerCase,
   changeToUpperCase,
+  transform,
 };

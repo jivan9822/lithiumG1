@@ -3,7 +3,7 @@ const router = express.Router(); ///test-you
 //importing a custom module
 const xyz = require("../logger");
 const { loggers } = require("../logger/logger");
-const heplper = require("../util/helper");
+const { printDateClosure } = require("../util/helper");
 const formater = require("../validator/formatter");
 //importing external package
 const underscore = require("underscore");
@@ -46,9 +46,15 @@ router.get("/test-me", function (req, res) {
     "=========================Problem-2 Solution========================="
   );
 
-  heplper.printDate();
-  heplper.printMonth();
-  heplper.getBatchInfo();
+  // heplper.printDate();
+  // heplper.printMonth();
+  // heplper.getBatchInfo();
+
+  // using Closures
+  const date = printDateClosure();
+  console.log(date.getDate());
+  console.log(date.getMonth());
+  console.log(date.getBatchInfo());
 
   // ================Problem 3==================================
 
@@ -57,11 +63,14 @@ router.get("/test-me", function (req, res) {
   );
 
   let str = "  Jivan Rajpal Toshniwal   ";
-
-  str = formater.trim(str);
+  str = formater.transform(str, formater.trim);
   console.log(str);
-  console.log(formater.changeToUpperCase(str));
-  console.log(formater.changetoLowerCase(str));
+  console.log(formater.transform(str, formater.changeToUpperCase));
+  console.log(formater.transform(str, formater.changetoLowerCase));
+  // str = formater.trim(str);
+  // console.log(str);
+  // console.log(formater.changeToUpperCase(str));
+  // console.log(formater.changetoLowerCase(str));
 
   // ================Problem 4==================================
 
