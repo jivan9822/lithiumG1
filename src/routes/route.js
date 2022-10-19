@@ -50,13 +50,6 @@ router.post("/test-post-2", function (req, res) {
 });
 
 router.post("/test-post-3", function (req, res) {
-  // let id = req.body.user
-  // let pwd= req.body.password
-
-  // console.log( id , pwd)
-
-  console.log(req.body);
-
   res.send({ msg: "hi", status: true });
 });
 
@@ -67,10 +60,27 @@ router.post("/test-post-4", function (req, res) {
   res.send({ msg: arr, status: true });
 });
 
-const Players = [];
+// Write Post Api
+
+const path = require("path");
+const fs = require("fs");
+let Players = [];
 router.get("/addPlayer", (req, res) => {
-  res.sendFile("index.html");
+  console.log(__dirname);
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
-router.post("/addPlayer", (req, res) => {});
+router.post("/addPlayer", (req, res) => {
+  req.body.Hobbies = req.body.Hobbies.split(" ");
+  fs.readFile("./data/data.json", (err, data) => {
+    if (!err) {
+      Players = JSON.parse(data);
+    } else {
+      console.log(err);
+    }
+    Players.push(req.body);
+    fs.writeFile("./data/data.json", JSON.stringify(Players), (err) => {});
+  });
+  res.redirect("/addPlayer");
+});
 
 module.exports = router;

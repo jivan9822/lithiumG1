@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Jivan Toshniwal",
+    "date": "2022-10-07",
+    "gender": "M",
+    "city": "Mumbai",
+    "Hobbies": ["Cricket", "Baddy", "Singing"]
+  },
+  {
+    "name": "Prakash Gupta",
+    "date": "2022-10-05",
+    "gender": "M",
+    "city": "Kanpur",
+    "Hobbies": ["FootBall", "Drawing"]
+  }
+]
