@@ -1,16 +1,16 @@
 [
   {
-    "name": "Jivan Toshniwal",
-    "date": "2022-10-07",
+    "name": "Jivan",
+    "date": "2022-10-12",
     "gender": "M",
     "city": "Mumbai",
-    "Hobbies": ["Cricket", "Baddy", "Singing"]
+    "Hobbies": ["Baddy", "Programin", "Cp", "Cricket"]
   },
   {
-    "name": "Prakash Gupta",
-    "date": "2022-10-05",
+    "name": "Pritesh Kumat",
+    "date": "2022-10-03",
     "gender": "M",
-    "city": "Kanpur",
-    "Hobbies": ["FootBall", "Drawing"]
+    "city": "Zarkand",
+    "Hobbies": ["Cricket", "Teaching", "MotivatinalClass"]
   }
 ]

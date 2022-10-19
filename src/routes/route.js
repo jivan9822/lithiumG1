@@ -65,10 +65,13 @@ router.post("/test-post-4", function (req, res) {
 const path = require("path");
 const fs = require("fs");
 let Players = [];
+
 router.get("/addPlayer", (req, res) => {
   console.log(__dirname);
   res.sendFile(path.join(__dirname, "../index.html"));
 });
+
+
 router.post("/addPlayer", (req, res) => {
   req.body.Hobbies = req.body.Hobbies.split(" ");
   fs.readFile("./data/data.json", (err, data) => {
@@ -81,6 +84,21 @@ router.post("/addPlayer", (req, res) => {
     fs.writeFile("./data/data.json", JSON.stringify(Players), (err) => {});
   });
   res.redirect("/addPlayer");
+});
+
+// Missing Number
+
+router.post("/sol1", (req, res) => {
+  const arr = req.body;
+  let i = arr[0];
+  let j = 0; 
+  let len = arr.length;
+  while (j < len) {
+    if (i++ != arr[j++]) {
+      res.send(`Missing Number is: ${--i}`);
+    }
+  }
+  res.send(`Missing Number is: ${i}`);
 });
 
 module.exports = router;
