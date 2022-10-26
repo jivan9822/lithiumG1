@@ -8,12 +8,16 @@ const addBook2 = async (req, res) => {
   res.send(bookCreate);
 };
 
-// Updated some field price, stockAvailable and tags 
+// Updated some field price, stockAvailable and tags
 const price = () => Math.round(Math.random() * 1000);
 
 const updateDate = (req, res) => {
   bookStore.find({}, (err, found) => {
-    found.map((each,index) => {
+    found.map((each, index) => {
+      each.title = each.title.toLowerCase();
+      each.author = each.author.toLowerCase();
+      each.country = each.country.toLowerCase();
+      each.language = each.language.toLowerCase();
       const temp = price();
       each.price = {
         Indian: `${temp}INR`,
@@ -27,22 +31,74 @@ const updateDate = (req, res) => {
       each.tags.push("No Tag Avaliable");
       each.save();
     });
-    console.log(found);
   });
 };
 // updateDate();
 
-// All Queries
+const bookQuery = async (req, res) => {
+  const name = req.query;
+  const key = Object.keys(req.query)[0];
+  let sendData = "Received";
 
-// 1) bookList : gives all the books- their bookName and authorName only
-// getBooksInYear: takes year as input in post request and gives list of all books published that year
-// getParticularBooks:- (this is a good one, make sincere effort to solve this) take any input and use it as a condition to fetch books that satisfy that condition
-// e.g if body had { name: “hi”} then you would fetch the books with this name
-// if body had { year: 2020} then you would fetch the books in this year
-// hence the condition will differ based on what you input in the request body
-// getXINRBooks- request to return all books who have an Indian price tag of “100INR” or “200INR” or “500INR”
-// getRandomBooks - returns books that are available in stock or have more than 500 pages
+  // 1) bookList : gives all the books- their bookName and authorName only
 
+  if (name[key] === "bookList") {
+    sendData = await bookStore
+      .find()
+      .select({ title: 1, author: 1, _id: 0, price: 1 });
+  }
 
+  // 2) getBooksInYear: takes year as input in post request and gives list of all books published that year
+  if (key === "year") {
+    sendData = await bookStore.find({ year: name[key] });
+  }
 
-module.exports.addBook2 = addBook2;
+  // 3) by Book title
+  if (key === "bookName") {
+    const search = name[key].toLowerCase();
+
+    const newData = await bookStore.find({ title: new RegExp("^" + search) });
+    sendData = newData;
+  }
+
+  // 4) by Book author
+  if (key === "author") {
+    const search = name[key].toLowerCase();
+
+    const newData = await bookStore.find({ author: new RegExp("^" + search) });
+    sendData = newData;
+  }
+
+  // 5) by country
+  if (key === "country") {
+    const search = name[key].toLowerCase();
+
+    const newData = await bookStore.find({
+      country: new RegExp("^" + search),
+    });
+    sendData = newData;
+  }
+
+  // 6) Search in range
+  if (key === "price") {
+    const search = name[key];
+    const newData = await bookStore.find();
+    const newArr = newData.filter((each) => {
+      return each.price.Indian === search;
+    });
+    sendData = newArr;
+  }
+
+  // 7) getRandomBooks - returns books that are available in stock or have more than 500 pages
+
+  if (key === "pages") {
+    const search = name[key];
+    sendData = await bookStore.find({ pages: { $lt: search } });
+  }
+  res.send(sendData);
+};
+
+module.exports = {
+  addBook2,
+  bookQuery,
+};

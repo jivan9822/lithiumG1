@@ -3,14 +3,6 @@
 
 const mongoose = require("mongoose");
 
-  // "author": "Dante Alighieri",
-  // "country": "Italy",
-  // "imageLink": "images/the-divine-comedy.jpg",
-  // "language": "Italian",
-  // "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
-  // "pages": 928,
-  // "year": 1315,
-
 const bookSchema = new mongoose.Schema(
   {
     author: String,
@@ -19,7 +11,7 @@ const bookSchema = new mongoose.Schema(
     language: String,
     link: String,
     pages: Number,
-    bookName: {
+    title: {
       type: String,
       require: true,
     },
