@@ -21,11 +21,14 @@ const createAuthor = async function (req, res) {
 };
 // end Prob 1
 
-
-// const getAuthorsData = async function (req, res) {
-//   let authors = await AuthorModel.find();
-//   res.send({ data: authors });
-// };
+const getAuthorsData = async function (req, res) {
+  let authors = await AuthorModel.find().select({
+    authorName: 1,
+    _id: 0,
+    rating: 1,
+  });
+  res.send({ data: authors });
+};
 
 module.exports.createAuthor = createAuthor;
-// module.exports.getAuthorsData = getAuthorsData;
+module.exports.getAuthorsData = getAuthorsData;

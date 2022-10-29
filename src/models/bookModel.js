@@ -25,6 +25,10 @@ const newBook = mongoose.Schema(
       ref: "Publisher",
       required: [true, "Publisher ID must be there!"],
     },
+    isHardCover: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

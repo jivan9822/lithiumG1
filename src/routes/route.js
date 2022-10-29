@@ -13,12 +13,19 @@ router.post("/createAuthor", authorController.createAuthor);
 
 router.post("/createPublisher", publisherCont.createPublisher);
 
-// router.get("/getAuthorsData", authorController.getAuthorsData)
+router.get("/getAuthorsData", authorController.getAuthorsData);
+
+router.get("/getPublishersData", publisherCont.getPublisherData);
 
 router.post("/createBook", bookController.createBook);
 
-router.get("/getBooksData", bookController.getBooksData)
+router.get("/getBooksData", bookController.getBooksData);
 
-router.get("/getBooksWithAuthorDetails", bookController.getBooksWithAuthorDetails)
+router.get("/getBooksWithDetails", bookController.getBooksWithDetails);
+
+// Create a new PUT api /books and perform the following two operations
+
+router.put("/updateSchemaField", bookController.updateSchemaField);
+router.put("/UpdatePrice", bookController.UpdatePrice);
 
 module.exports = router;

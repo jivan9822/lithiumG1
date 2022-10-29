@@ -21,3 +21,8 @@ exports.createPublisher = async (req, res) => {
 };
 
 // End of Problem 2
+
+exports.getPublisherData = async function (req, res) {
+  let publisher = await publishModel.find();
+  res.send({ data: publisher });
+};
