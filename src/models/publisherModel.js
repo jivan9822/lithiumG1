@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const newPublisher = mongoose.Schema({
   publisherName: {
     type: String,
-    required: true,
-    unique: true,
+    required: [true, "Publisher must have a name!"],
+    unique: [true, "Publisher name already exits"],
   },
   headQuarter: String,
 });

@@ -1,5 +1,5 @@
 const publishModel = require("../models/publisherModel");
-
+// Problem 2 create Publisher
 exports.createPublisher = async (req, res) => {
   try {
     const publishdata = await publishModel.create(req.body);
@@ -19,3 +19,5 @@ exports.createPublisher = async (req, res) => {
     });
   }
 };
+
+// End of Problem 2

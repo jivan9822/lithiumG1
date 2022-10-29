@@ -1,5 +1,5 @@
 const AuthorModel = require("../models/authorModel");
-
+// Prob 1 create author
 const createAuthor = async function (req, res) {
   try {
     let author = req.body;
@@ -19,6 +19,8 @@ const createAuthor = async function (req, res) {
     });
   }
 };
+// end Prob 1
+
 
 // const getAuthorsData = async function (req, res) {
 //   let authors = await AuthorModel.find();
