@@ -1,0 +1,427 @@
+[
+  {
+    "name": "Android Small Removable Sticker Sheet",
+    "price": "2.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Android Large Removable Sticker Sheet",
+    "price": "2.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Google Bot",
+    "price": "9.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Google Emoji Sticker Pack",
+    "price": "4.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Waze Pack of 9 Decal Set",
+    "price": "16.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Google Twill Cap",
+    "price": "10.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Fold-over Beanie Grey",
+    "price": "9.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Pom Beanie Charcoal",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Waze Women's Short Sleeve Tee",
+    "price": "18.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Waze Men's Short Sleeve Tee",
+    "price": "18.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Rucksack",
+    "price": "79.99",
+    "category": "bags"
+  },
+  {
+    "name": "Google Rolltop Backpack Blue",
+    "price": "149.99",
+    "category": "bags"
+  },
+  {
+    "name": "Android Trace Bottle Black",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Android Trace Mug Black",
+    "price": "9.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Thermal Bottle Blue",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Thermal Bottle Green",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Thermal Bottle White",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Thermal Bottle Red",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Thermal Bottle Yellow",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Hub Mug White",
+    "price": "12.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "YouTube Transmission Bottle Black",
+    "price": "23.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Snapback Black Cap",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Snapback Navy Cap",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Cappy Bib Blue",
+    "price": "13.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Mustachio Bib Blue",
+    "price": "13.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Cappy Bib White",
+    "price": "13.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Mustachio Bib White",
+    "price": "13.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Standard Bib Red",
+    "price": "13.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Protector Onesie Navy",
+    "price": "25.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Standard Onesie Grey",
+    "price": "25.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Standard Onesie Green",
+    "price": "25.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Kids Tee Blue",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Kids Tee Green",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Kids Tee White",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Trike Tee Black",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Flower Tee Purple",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Protector Tee Navy",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Kids Tee White",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Kids Tee Black",
+    "price": "19.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Kids Onesie White",
+    "price": "25.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Windup Android",
+    "price": "3.99",
+    "category": "accessories"
+  },
+  {
+    "name": "Google Sunglasses",
+    "price": "3.50",
+    "category": "accessories"
+  },
+  {
+    "name": "Google Mini Kick Ball",
+    "price": "1.99",
+    "category": "accessories"
+  },
+  {
+    "name": "7 inch Dog Frisbee",
+    "price": "1.50",
+    "category": "accessories"
+  },
+  {
+    "name": "Android Large Trace Journal Black",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Android Small Trace Journal Black",
+    "price": "12.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Small Standard Journal Navy",
+    "price": "12.99",
+    "category": "office"
+  },
+  {
+    "name": "YouTube Transmission Journal Black",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Laptop and Cell Phone Stickers",
+    "price": "2.99",
+    "category": "office"
+  },
+  {
+    "name": "Maze Pen",
+    "price": "0.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Tri Pen Black",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Tri Pen Silver",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Stylus Pen w/ LED Light",
+    "price": "5.50",
+    "category": "office"
+  },
+  {
+    "name": "Google Large Standard Journal Grey",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Large Standard Journal Navy",
+    "price": "15.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Metallic Notebook Set",
+    "price": "5.99",
+    "category": "office"
+  },
+  {
+    "name": "Waze Baby on Board Window Decal",
+    "price": "2.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Waze Mood Happy Window Decal",
+    "price": "1.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Waze Mood Original Window Decal",
+    "price": "1.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Waze Mood Ninja Window Decal",
+    "price": "1.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Waze Women's Typography Short Sleeve Tee",
+    "price": "18.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Waze Men's Typography Short Sleeve Tee",
+    "price": "18.99",
+    "category": "shop by brand"
+  },
+  {
+    "name": "Google Tee White",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Tee Red",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Tee Yellow",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Tee Green",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Tee Blue",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Bike Tee Navy",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Braille Tee Black",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Women's Tee Grey",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Android Matrix Tee White",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Tee Black",
+    "price": "21.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google Light Pen Blue",
+    "price": "2.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Light Pen Green",
+    "price": "2.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Light Pen Red",
+    "price": "2.99",
+    "category": "office"
+  },
+  {
+    "name": "Google Light Pen Yellow",
+    "price": "2.99",
+    "category": "office"
+  },
+  {
+    "name": "Android 16 oz Tumbler Black",
+    "price": "21.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Android 25 oz Gear Cap Bottle White",
+    "price": "26.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Android Twill Cap Black",
+    "price": "12.99",
+    "category": "apparel"
+  },
+  {
+    "name": "Google 16 oz Tumbler Blue",
+    "price": "12.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "Google Twill Sandwich Cap Navy",
+    "price": "12.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube 25 oz Gear Cap Bottle Black",
+    "price": "26.99",
+    "category": "drinkware"
+  },
+  {
+    "name": "YouTube Twill Sandwich Cap Black",
+    "price": "12.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Icon Pullover Black",
+    "price": "59.99",
+    "category": "apparel"
+  },
+  {
+    "name": "YouTube Wordmark Crew Grey",
+    "price": "51.99",
+    "category": "apparel"
+  }
+]
