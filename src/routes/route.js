@@ -4,19 +4,18 @@ const { orderPurchase } = require("../controllers/purchaseOrder");
 const { createUser } = require("../controllers/userControler");
 const router = express.Router();
 
-// Schema User, Product, Order Imported
+// HEADER VALIDATION IMPORTED
 
-// Header validation Imported
 const { isPass } = require("../middlewares/headerValidation");
 const { isvalid } = require("../middlewares/requestHandler");
 
-// Create User Router
+// CREATE USER ROUTER
 router.route("/createUser").post(isPass, createUser);
 
-// CREATE PRODUCT
+// CREATE PRODUCT ROUTER
 router.route("/createProduct").post(createProduct);
 
-// PURCHASE ORDERS
+// PURCHASE ORDERS ROUTER
 
 router.route("/purchaseOrder").post(isPass, isvalid, orderPurchase);
 
