@@ -1,28 +1,22 @@
 const express = require("express");
-const { deleteUser } = require("../controllers/deleteUser");
-const { login } = require("../controllers/loginControler");
-const { updateDetails } = require("../controllers/updateDetails");
-const { createUser } = require("../controllers/userControler");
-const { userDetails } = require("../controllers/userDetails");
-const { checkCrendiantials } = require("../middle-ware/checkUiPass");
-const { isHeader } = require("../middle-ware/isHeader");
-const { isTokenValid } = require("../middle-ware/istokenvalid");
 const clssCont = require("../controllers/controlerClass");
-const Cont = new clssCont;
+const middleWare = require("../middle-ware/classMiddleWare");
+const Cont = new clssCont();
+const MiddleCla = new middleWare();
 const router = express.Router();
 
 router.get("/test-me", function (req, res) {
   res.send("My first ever api!");
 });
 
-router.route("/createUser").post(createUser);
+router.route("/createUser").post(Cont.createUser);
 
-router.route("/login").post(checkCrendiantials, login);
+router.route("/login").post(MiddleCla.checkCrendiantials, Cont.login);
 
 router
   .route("/user/:userId")
-  .get(isHeader, isTokenValid, userDetails)
-  .put(isHeader, isTokenValid, updateDetails)
-  .delete(isHeader, isTokenValid, Cont.deleteUser);
+  .get(MiddleCla.isHeader, MiddleCla.isTokenValid, Cont.userDetails)
+  .put(MiddleCla.isHeader, MiddleCla.isTokenValid, Cont.updateDetails)
+  .delete(MiddleCla.isHeader, MiddleCla.isTokenValid, Cont.deleteUser);
 
 module.exports = router;
