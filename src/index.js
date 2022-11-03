@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose
-  .connect(`${process.env.MONGO_DB}auth`, {
+  .connect(`${process.env.MONGODB}auth`, {
     useNewUrlParser: true,
   })
   .then(() => console.log("MongoDb is connected"))

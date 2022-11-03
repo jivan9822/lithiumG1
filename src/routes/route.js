@@ -1,21 +1,28 @@
-const express = require('express');
-const { createUser } = require('../controllers/userControler');
+const express = require("express");
+const { deleteUser } = require("../controllers/deleteUser");
+const { login } = require("../controllers/loginControler");
+const { updateDetails } = require("../controllers/updateDetails");
+const { createUser } = require("../controllers/userControler");
+const { userDetails } = require("../controllers/userDetails");
+const { checkCrendiantials } = require("../middle-ware/checkUiPass");
+const { isHeader } = require("../middle-ware/isHeader");
+const { isTokenValid } = require("../middle-ware/istokenvalid");
+const clssCont = require("../controllers/controlerClass");
+const Cont = new clssCont;
 const router = express.Router();
-const userController= require("../controllers/userControllerOld")
 
 router.get("/test-me", function (req, res) {
-    res.send("My first ever api!")
-})
+  res.send("My first ever api!");
+});
 
-router.route("/createUser").post(createUser)
+router.route("/createUser").post(createUser);
 
-// router.post("/users", userController.createUser  )
+router.route("/login").post(checkCrendiantials, login);
 
-// router.post("/login", userController.loginUser)
-
-// //The userId is sent by front end
-// router.get("/users/:userId", userController.getUserData)
-
-// router.put("/users/:userId", userController.updateUser)
+router
+  .route("/user/:userId")
+  .get(isHeader, isTokenValid, userDetails)
+  .put(isHeader, isTokenValid, updateDetails)
+  .delete(isHeader, isTokenValid, Cont.deleteUser);
 
 module.exports = router;
