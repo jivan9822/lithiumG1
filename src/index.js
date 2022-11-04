@@ -1,7 +1,9 @@
 const express = require("express");
 
+// DOTENV PACKAGE IMPORTED TO KEEP PASSWORD AND OTHER SENSITIVE STUFF SAFE
 const dotenv = require("dotenv");
 dotenv.config({ path: "../config.env" });
+
 const bodyParser = require("body-parser");
 const route = require("./routes/route.js");
 const { default: mongoose } = require("mongoose");
