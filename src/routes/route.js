@@ -6,6 +6,7 @@ const clssCont = require("../controllers/controlerClass");
 
 // MIDDLEWARE CLASS CONTROLER IMPORTED
 const middleWare = require("../middle-ware/classMiddleWare");
+
 const Cont = new clssCont();
 const MiddleCla = new middleWare();
 
